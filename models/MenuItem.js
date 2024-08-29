@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { type } = require('os');
+// const { type } = require('os');
 
 const menuItemSchema = new mongoose.Schema({
     name :{
@@ -12,7 +12,7 @@ const menuItemSchema = new mongoose.Schema({
     },
     taste : {
         type : String,
-        enum: ['sweet','spicey','sour'],
+        enum: ['sweet','spicy','sour'],
         required : true,
     },
     is_drink : {

@@ -5,7 +5,7 @@ const menuItem = require("../models/menuItem");
 router.post("/",async(req,res)=>{
     try{
         const data = req.body;
-        const newMenu =new MenuItem(data);
+        const newMenu =new menuItem(data);
         const response = await newMenu.save()
         console.log('data saved');
         res.status(200).json(response)
@@ -17,7 +17,7 @@ router.post("/",async(req,res)=>{
 
 router.get("/",async(req,res)=>{
     try{
-        const data = await MenuItem.find();
+        const data = await menuItem.find();
         console.log('data fected');
         res.status(200).json(data);
     }catch(err){
